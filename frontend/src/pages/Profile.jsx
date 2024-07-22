@@ -118,7 +118,7 @@ const Profile = () => {
               className="form-control"
               type="email"
               name="email"
-              placeholder="doe@gmail.com"
+              placeholder="email@gmail.com"
               value={formData.email}
               onChange={handleChange}
             />

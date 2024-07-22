@@ -108,9 +108,8 @@ const ForgotPassword = () => {
         className="inner-container"
         onSubmit={!hasEmail ? handleSendCode : handleRecoverPassword}
       >
-        <h2 className="form-title">{`${
-          !hasEmail ? "Recover Password" : "New Password"
-        }`}</h2>
+        <h2 className="form-title">{`${!hasEmail ? "Recover Password" : "New Password"
+          }`}</h2>
 
         {!hasEmail ? (
           <div className="form-group">
@@ -119,7 +118,7 @@ const ForgotPassword = () => {
               className="form-control"
               type="text"
               name="email"
-              placeholder="doe@gmail.com"
+              placeholder="email@gmail.com"
               value={formData.email}
               onChange={handleChange}
             />

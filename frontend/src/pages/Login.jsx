@@ -76,7 +76,7 @@ const Login = () => {
             className="form-control"
             type="text"
             name="email"
-            placeholder="doe@gmail.com"
+            placeholder="email@gmail.com"
             value={formData.email}
             onChange={handleChange}
           />
