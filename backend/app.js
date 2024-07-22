@@ -27,6 +27,10 @@ app.use("/api/v1/category", categoryRoute);
 app.use("/api/v1/file", fileRoute);
 app.use("/api/v1/posts", postRoute);
 
+app.get("/ping", (req, res) => {
+    res.send("Welcome to Blog API");
+});
+
 // not found route
 app.use("*", notfound);
 
