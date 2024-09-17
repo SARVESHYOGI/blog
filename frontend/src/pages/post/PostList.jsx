@@ -90,14 +90,17 @@ const PostList = () => {
   };
 
   return (
-    <div>
+    <div className="bg-blue-200 container mx-auto w-[60%] my-5 rounded-xl p-4">
       <button
-        className="button button-block"
+        className="button button-block bg-blue-700 text-white p-2 rounded-xl border border-blue-950 cursor-pointer 
+             hover:bg-blue-800 focus:ring-2 focus:ring-blue-500 focus:outline-none 
+             transition duration-300 ease-in-out transform hover:scale-105 active:scale-95"
+
         onClick={() => navigate("new-post")}
       >
         Add New Post
       </button>
-      <h2 className="table-title">Post list</h2>
+      <h2 className="table-title text-3xl bg-blue-400">Post list</h2>
 
       <input
         className="saerch-input"
@@ -111,15 +114,15 @@ const PostList = () => {
         {loading
           ? "Loading..."
           : posts.map((post) => (
-              <div
-                className="post-card"
-                key={post._id}
-                onClick={() => navigate(`detail-post/${post._id}`)}
-              >
-                <h4 className="card-title">{post.title}</h4>
-                <p className="card-desc">{post.desc.substring(0, 50)}</p>
-              </div>
-            ))}
+            <div
+              className="post-card"
+              key={post._id}
+              onClick={() => navigate(`detail-post/${post._id}`)}
+            >
+              <h4 className="card-title">{post.title}</h4>
+              <p className="card-desc">{post.desc.substring(0, 50)}</p>
+            </div>
+          ))}
       </div>
 
       {pageCount.length > 0 && (

@@ -90,8 +90,8 @@ const Home = () => {
   };
 
   return (
-    <div>
-      <h2 className="table-title">Post list</h2>
+    <div className="bg-blue-200 container mx-auto w-[60%] my-5 rounded-xl">
+      <h2 className="table-title text-3xl">Post list</h2>
 
       <input
         className="saerch-input"
@@ -105,15 +105,15 @@ const Home = () => {
         {loading
           ? "Loading..."
           : posts.map((post) => (
-              <div
-                className="post-card"
-                key={post._id}
-                onClick={() => navigate(`/posts/detail-post/${post._id}`)}
-              >
-                <h4 className="card-title">{post.title}</h4>
-                <p className="card-desc">{post.desc.substring(0, 50)}</p>
-              </div>
-            ))}
+            <div
+              className="post-card"
+              key={post._id}
+              onClick={() => navigate(`/posts/detail-post/${post._id}`)}
+            >
+              <h4 className="card-title">{post.title}</h4>
+              <p className="card-desc">{post.desc.substring(0, 50)}</p>
+            </div>
+          ))}
       </div>
 
       {pageCount.length > 0 && (
@@ -127,7 +127,10 @@ const Home = () => {
           </button>
           {pageCount.map((pageNumber, index) => (
             <button
-              className="pag-button"
+              className="pag-button bg-blue-700 text-white p-2 rounded-xl border border-blue-950 cursor-pointer 
+             hover:bg-blue-800 focus:ring-2 focus:ring-blue-500 focus:outline-none 
+             transition duration-300 ease-in-out transform hover:scale-105 active:scale-95"
+
               key={index}
               onClick={() => handlePage(pageNumber)}
               style={{

@@ -80,7 +80,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="form-container">
+    <div className="form-container text-white bg-blue-500">
       <form className="inner-container" onSubmit={handleSubmit}>
         <h2 className="form-title">Signup Form</h2>
         <div className="form-group">
@@ -139,7 +139,9 @@ const Signup = () => {
 
         <div className="form-group">
           <input
-            className="button"
+            className="bg-blue-700 text-white p-2 rounded-xl border border-blue-950 cursor-pointer 
+           hover:bg-blue-800 focus:ring-2 focus:ring-blue-500 focus:outline-none 
+           transition duration-300 ease-in-out transform hover:scale-105 active:scale-95"
             type="submit"
             value={`${loading ? "Saving..." : "Signup"}`}
           />

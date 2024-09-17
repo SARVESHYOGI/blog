@@ -1,5 +1,6 @@
 import "react-toastify/dist/ReactToastify.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 import { ToastContainer } from "react-toastify";
 
 import { Routes, Route } from "react-router-dom";
@@ -20,9 +21,10 @@ import UpdatePost from "./pages/post/UpdatePost";
 import VerifyUser from "./pages/VerifyUser";
 import ForgotPassword from "./pages/ForgotPassword";
 
+
 function App() {
   return (
-    <>
+    <div className="bg-blue-300 min-h-screen pb-5 ">
       <Routes>
         <Route element={<PrivateLayout />}>
           <Route path="/" element={<Home />} />
@@ -47,7 +49,7 @@ function App() {
         </Route>
       </Routes>
       <ToastContainer />
-    </>
+    </div>
   );
 }
 
